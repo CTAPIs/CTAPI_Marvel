@@ -7,6 +7,7 @@
 //
 
 #import "__APIManagerFileName__.h"
+#import "CTMarvelService.h"
 
 NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API param name#>";
 
@@ -93,7 +94,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 - (BOOL)beforePerformSuccessWithResponse:(CTURLResponse *)response
 {
     self.isFirstPage = NO;
-    NSInteger totalPageCount = integerFromObject(response.content, <# total page key #>);
+    NSInteger totalPageCount = ceil([response.content[@"data"][@"total"] doubleValue]/(double)self.pageSize)
     if (self.pageNumber == totalPageCount) {
         self.isLastPage = YES;
     } else {
@@ -106,7 +107,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 - (BOOL)beforePerformFailWithResponse:(CTURLResponse *)response
 {
     [super beforePerformFailWithResponse:response];
-    self.errorMessage = <# fetch error message #>;
+    self.errorMessage = response.content[@"status"];
     return YES;
 }
 
@@ -116,14 +117,14 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
     return @"__MethodName__";
 }
 
-- (NSString *)serviceType
+- (NSString *)serviceIdentifier
 {
-    return __ServiceType__;
+    return CTServiceIdentifierMarvel;
 }
 
 - (CTAPIManagerRequestType)requestType
 {
-    return __RequestType__;
+    return CTAPIManagerRequestTypeGet;
 }
 
 #pragma mark - CTAPIManagerValidator

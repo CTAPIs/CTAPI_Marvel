@@ -17,7 +17,14 @@
 		4A3CC51720464BFE009F3CF1 /* CTPageAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC51420464BFE009F3CF1 /* CTPageAPIViewController.m */; };
 		4A3CC51E20464C3A009F3CF1 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC51A20464C3A009F3CF1 /* ResultView.m */; };
 		4A3CC51F20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC51D20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m */; };
-		4A3CC52320464FCA009F3CF1 /* Target_CTMarvelKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC52220464FCA009F3CF1 /* Target_CTMarvelKey.m */; };
+		4A3CC53620465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC53020465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.m */; };
+		4A3CC53720465418009F3CF1 /* CTMarvelCharactersAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC53320465418009F3CF1 /* CTMarvelCharactersAPIManager.m */; };
+		4A3CC53D204654D0009F3CF1 /* Target_CTMarvelKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC53C204654D0009F3CF1 /* Target_CTMarvelKey.m */; };
+		4A3CC540204654E0009F3CF1 /* Target_CTAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC53F204654E0009F3CF1 /* Target_CTAppContext.m */; };
+		4A3CC54320465551009F3CF1 /* Target_CTMarvelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC54220465551009F3CF1 /* Target_CTMarvelService.m */; };
+		4A3CC5472046563D009F3CF1 /* CTMarvelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC5462046563D009F3CF1 /* CTMarvelService.m */; };
+		4A3CC54A20465CD1009F3CF1 /* CharacterAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC54920465CD1009F3CF1 /* CharacterAPIViewController.m */; };
+		4A3CC54E20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC54D20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m */; };
 		A920CC7CE957ECDC642F301A /* libPods-CTAPI_Marvel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BD973026D37D6C2B6B7439 /* libPods-CTAPI_Marvel.a */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +48,22 @@
 		4A3CC51A20464C3A009F3CF1 /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
 		4A3CC51C20464C3A009F3CF1 /* BLAPIManagerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAPIManagerTableViewCell.h; sourceTree = "<group>"; };
 		4A3CC51D20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAPIManagerTableViewCell.m; sourceTree = "<group>"; };
-		4A3CC52120464FCA009F3CF1 /* Target_CTMarvelKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_CTMarvelKey.h; sourceTree = "<group>"; };
-		4A3CC52220464FCA009F3CF1 /* Target_CTMarvelKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_CTMarvelKey.m; sourceTree = "<group>"; };
+		4A3CC53020465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMarvelCharacterByIdAPIManager.m; sourceTree = "<group>"; };
+		4A3CC53120465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMarvelCharacterByIdAPIManager.h; sourceTree = "<group>"; };
+		4A3CC53320465418009F3CF1 /* CTMarvelCharactersAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMarvelCharactersAPIManager.m; sourceTree = "<group>"; };
+		4A3CC53420465418009F3CF1 /* CTMarvelCharactersAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMarvelCharactersAPIManager.h; sourceTree = "<group>"; };
+		4A3CC53B204654D0009F3CF1 /* Target_CTMarvelKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_CTMarvelKey.h; sourceTree = "<group>"; };
+		4A3CC53C204654D0009F3CF1 /* Target_CTMarvelKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_CTMarvelKey.m; sourceTree = "<group>"; };
+		4A3CC53E204654E0009F3CF1 /* Target_CTAppContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_CTAppContext.h; sourceTree = "<group>"; };
+		4A3CC53F204654E0009F3CF1 /* Target_CTAppContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_CTAppContext.m; sourceTree = "<group>"; };
+		4A3CC54120465551009F3CF1 /* Target_CTMarvelService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_CTMarvelService.h; sourceTree = "<group>"; };
+		4A3CC54220465551009F3CF1 /* Target_CTMarvelService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_CTMarvelService.m; sourceTree = "<group>"; };
+		4A3CC5452046563D009F3CF1 /* CTMarvelService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMarvelService.h; sourceTree = "<group>"; };
+		4A3CC5462046563D009F3CF1 /* CTMarvelService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMarvelService.m; sourceTree = "<group>"; };
+		4A3CC54820465CD1009F3CF1 /* CharacterAPIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterAPIViewController.h; sourceTree = "<group>"; };
+		4A3CC54920465CD1009F3CF1 /* CharacterAPIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterAPIViewController.m; sourceTree = "<group>"; };
+		4A3CC54C20465D55009F3CF1 /* CharacterAPIViewController+APIParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CharacterAPIViewController+APIParams.h"; sourceTree = "<group>"; };
+		4A3CC54D20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CharacterAPIViewController+APIParams.m"; sourceTree = "<group>"; };
 		50C7D1A614AA4EAD6A530A61 /* Pods-CTAPI_Marvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTAPI_Marvel.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTAPI_Marvel/Pods-CTAPI_Marvel.release.xcconfig"; sourceTree = "<group>"; };
 		B0BD973026D37D6C2B6B7439 /* libPods-CTAPI_Marvel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CTAPI_Marvel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +127,8 @@
 		4A3CC50620464A47009F3CF1 /* CTAPI_Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				4A3CC52D20465418009F3CF1 /* APIManagers */,
+				4A3CC53520465418009F3CF1 /* Target */,
 			);
 			path = CTAPI_Marvel;
 			sourceTree = "<group>";
@@ -113,7 +136,7 @@
 		4A3CC50720464B78009F3CF1 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				4A3CC52020464FB7009F3CF1 /* TargetForKey */,
+				4A3CC538204654D0009F3CF1 /* Target */,
 				4A3CC50820464B78009F3CF1 /* APIControllers */,
 				4A3CC50F20464B78009F3CF1 /* BaseAPIViewController */,
 			);
@@ -171,6 +194,9 @@
 		4A3CC50E20464B78009F3CF1 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				4A3CC54B20465D3C009F3CF1 /* ParamCategories */,
+				4A3CC54820465CD1009F3CF1 /* CharacterAPIViewController.h */,
+				4A3CC54920465CD1009F3CF1 /* CharacterAPIViewController.m */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -222,13 +248,94 @@
 			path = BLAPIManagerTableViewCell;
 			sourceTree = "<group>";
 		};
-		4A3CC52020464FB7009F3CF1 /* TargetForKey */ = {
+		4A3CC52D20465418009F3CF1 /* APIManagers */ = {
 			isa = PBXGroup;
 			children = (
-				4A3CC52120464FCA009F3CF1 /* Target_CTMarvelKey.h */,
-				4A3CC52220464FCA009F3CF1 /* Target_CTMarvelKey.m */,
+				4A3CC52E20465418009F3CF1 /* characters */,
 			);
-			path = TargetForKey;
+			path = APIManagers;
+			sourceTree = "<group>";
+		};
+		4A3CC52E20465418009F3CF1 /* characters */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CC52F20465418009F3CF1 /* CTMarvelCharacterByIdAPIManager */,
+				4A3CC53220465418009F3CF1 /* CTMarvelCharactersAPIManager */,
+			);
+			path = characters;
+			sourceTree = "<group>";
+		};
+		4A3CC52F20465418009F3CF1 /* CTMarvelCharacterByIdAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CC53120465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.h */,
+				4A3CC53020465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.m */,
+			);
+			path = CTMarvelCharacterByIdAPIManager;
+			sourceTree = "<group>";
+		};
+		4A3CC53220465418009F3CF1 /* CTMarvelCharactersAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CC53320465418009F3CF1 /* CTMarvelCharactersAPIManager.m */,
+				4A3CC53420465418009F3CF1 /* CTMarvelCharactersAPIManager.h */,
+			);
+			path = CTMarvelCharactersAPIManager;
+			sourceTree = "<group>";
+		};
+		4A3CC53520465418009F3CF1 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CC5442046562C009F3CF1 /* Service */,
+				4A3CC54120465551009F3CF1 /* Target_CTMarvelService.h */,
+				4A3CC54220465551009F3CF1 /* Target_CTMarvelService.m */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		4A3CC538204654D0009F3CF1 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CC539204654D0009F3CF1 /* CTAppContext */,
+				4A3CC53A204654D0009F3CF1 /* Key */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		4A3CC539204654D0009F3CF1 /* CTAppContext */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CC53E204654E0009F3CF1 /* Target_CTAppContext.h */,
+				4A3CC53F204654E0009F3CF1 /* Target_CTAppContext.m */,
+			);
+			path = CTAppContext;
+			sourceTree = "<group>";
+		};
+		4A3CC53A204654D0009F3CF1 /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CC53B204654D0009F3CF1 /* Target_CTMarvelKey.h */,
+				4A3CC53C204654D0009F3CF1 /* Target_CTMarvelKey.m */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		4A3CC5442046562C009F3CF1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CC5452046563D009F3CF1 /* CTMarvelService.h */,
+				4A3CC5462046563D009F3CF1 /* CTMarvelService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4A3CC54B20465D3C009F3CF1 /* ParamCategories */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CC54C20465D55009F3CF1 /* CharacterAPIViewController+APIParams.h */,
+				4A3CC54D20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m */,
+			);
+			path = ParamCategories;
 			sourceTree = "<group>";
 		};
 		C2221C3585E79F919392FF87 /* Pods */ = {
@@ -365,13 +472,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3CC53720465418009F3CF1 /* CTMarvelCharactersAPIManager.m in Sources */,
+				4A3CC540204654E0009F3CF1 /* Target_CTAppContext.m in Sources */,
+				4A3CC54E20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m in Sources */,
 				4A3CC4F5204646C8009F3CF1 /* ViewController.m in Sources */,
 				4A3CC51720464BFE009F3CF1 /* CTPageAPIViewController.m in Sources */,
+				4A3CC54320465551009F3CF1 /* Target_CTMarvelService.m in Sources */,
 				4A3CC500204646C8009F3CF1 /* main.m in Sources */,
+				4A3CC53620465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.m in Sources */,
 				4A3CC51E20464C3A009F3CF1 /* ResultView.m in Sources */,
-				4A3CC52320464FCA009F3CF1 /* Target_CTMarvelKey.m in Sources */,
+				4A3CC53D204654D0009F3CF1 /* Target_CTMarvelKey.m in Sources */,
 				4A3CC51620464BFE009F3CF1 /* BaseAPIViewController.m in Sources */,
 				4A3CC51F20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m in Sources */,
+				4A3CC54A20465CD1009F3CF1 /* CharacterAPIViewController.m in Sources */,
+				4A3CC5472046563D009F3CF1 /* CTMarvelService.m in Sources */,
 				4A3CC4F2204646C8009F3CF1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

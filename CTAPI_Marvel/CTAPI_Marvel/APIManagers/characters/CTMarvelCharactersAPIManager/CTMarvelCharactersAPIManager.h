@@ -8,8 +8,6 @@
 
 #import <CTNetworking/CTNetworking.h>
 
-extern NSString * const kCTMarvelCharactersAPIManagerParamKey<#API param name#>;
-
 @interface CTMarvelCharactersAPIManager : CTAPIBaseManager <CTAPIManager, CTPagableAPIManager>
 
 @property (nonatomic, assign) NSInteger pageSize;

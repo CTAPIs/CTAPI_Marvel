@@ -3,20 +3,20 @@
 Cyan='\033[0;36m'
 Default='\033[0;m'
 
-groupPath="../CTAPI_Marvel/CTAPI_Marvel"
+groupPath="../CTAPI_Marvel/CTAPI_Marvel/APIManagers"
 group=""
 fileName=""
 methodName=""
 confirmed="n"
 year=`date +%Y`
 
-# serviceIdentifier=""
+# serviceIdentifier="CTServiceIdentifierMarvel"
 # serviceIdentifierList=("kCTServiceBLHTTPSService" "kCTServiceBLOpenAPIService")
 
 cachePolicy=""
 cachePolicyList=("CTAPIManagerCachePolicyNoCache" "CTAPIManagerCachePolicyMemory" "CTAPIManagerCachePolicyDisk" "CTAPIManagerCachePolicyMemory | CTAPIManagerCachePolicyDisk")
 
-requestType="CTAPIManagerRequestTypeGet"
+# requestType="CTAPIManagerRequestTypeGet"
 # requestTypeList=("CTAPIManagerRequestTypePost" "CTAPIManagerRequestTypeGet")
 
 getGroup() {
@@ -142,6 +142,6 @@ sed -i "" "s:__year__:${year}:g"                    "$headerFilePath"
 sed -i "" "s:__year__:${year}:g"                    "$implementFilePath"
 sed -i "" "s:__APIManagerFileName__:${fileName}:g"  "$implementFilePath"
 sed -i "" "s:__MethodName__:${methodName}:g"        "$implementFilePath"
-# sed -i "" "s:__ServiceType__:${serviceIdentifier}:g"      "$implementFilePath"
+# sed -i "" "s:__ServiceIdentifier__:${serviceIdentifier}:g"      "$implementFilePath"
 sed -i "" "s:__CachePolicy__:${cachePolicy}:g"      "$implementFilePath"
 # sed -i "" "s:__RequestType__:${requestType}:g"      "$implementFilePath"

@@ -7,5 +7,6 @@ target 'CTAPI_Marvel' do
  
   pod 'CTNetworking', :path => '../CTNetworking'
   pod 'HandyFrame'
+  pod 'AFNetworking'
 
 end

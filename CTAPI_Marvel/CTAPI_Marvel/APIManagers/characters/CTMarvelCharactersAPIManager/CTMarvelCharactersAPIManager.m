@@ -7,8 +7,7 @@
 //
 
 #import "CTMarvelCharactersAPIManager.h"
-
-NSString * const kCTMarvelCharactersAPIManagerParamKey<#API param name#> = @"<#API param name#>";
+#import "CTMarvelService.h"
 
 @interface CTMarvelCharactersAPIManager () <CTAPIManagerValidator>
 
@@ -30,7 +29,7 @@ NSString * const kCTMarvelCharactersAPIManagerParamKey<#API param name#> = @"<#A
     if (self) {
         self.validator = self;
         self.cachePolicy = CTAPIManagerCachePolicyNoCache;
-        _pageSize = 10;
+        _pageSize = 20;
 		_pageNumber = 0;
         _isFirstPage = YES;
         _isLastPage = NO;
@@ -70,20 +69,20 @@ NSString * const kCTMarvelCharactersAPIManagerParamKey<#API param name#> = @"<#A
 {
     NSMutableDictionary *result = [params mutableCopy];
 
-    if (result[<# key of page size #>] == nil) {
-        result[<# key of page size #>] = @(self.pageSize);
+    if (result[@"limit"] == nil) {
+        result[@"limit"] = @(self.pageSize);
     } else {
-        self.pageSize = [result[<# key of page size #>] integerValue];
+        self.pageSize = [result[@"limit"] integerValue];
     }
     
-    if (result[<# key of page number #>] == nil) {
+    if (result[@"offset"] == nil) {
         if (self.isFirstPage == NO) {
-            result[<# key of page number #>] = @(self.pageNumber);
+            result[@"offset"] = @(self.pageNumber * self.pageSize);
         } else {
-            result[<# key of page number #>] = @(0);
+            result[@"offset"] = @(0);
         }
     } else {
-        self.pageNumber = [result[<# key of page number #>] unsignedIntegerValue];
+        self.pageNumber = [result[@"offset"] unsignedIntegerValue] / self.pageSize;
     }
     
     return result;
@@ -93,7 +92,7 @@ NSString * const kCTMarvelCharactersAPIManagerParamKey<#API param name#> = @"<#A
 - (BOOL)beforePerformSuccessWithResponse:(CTURLResponse *)response
 {
     self.isFirstPage = NO;
-    NSInteger totalPageCount = integerFromObject(response.content, <# total page key #>);
+    NSInteger totalPageCount = ceil([response.content[@"data"][@"total"] doubleValue]/(double)self.pageSize);
     if (self.pageNumber == totalPageCount) {
         self.isLastPage = YES;
     } else {
@@ -106,7 +105,7 @@ NSString * const kCTMarvelCharactersAPIManagerParamKey<#API param name#> = @"<#A
 - (BOOL)beforePerformFailWithResponse:(CTURLResponse *)response
 {
     [super beforePerformFailWithResponse:response];
-    self.errorMessage = <# fetch error message #>;
+    self.errorMessage = response.content[@"status"];
     return YES;
 }
 
@@ -116,14 +115,14 @@ NSString * const kCTMarvelCharactersAPIManagerParamKey<#API param name#> = @"<#A
     return @"characters";
 }
 
-- (NSString *)serviceType
+- (NSString *)serviceIdentifier
 {
-    return __ServiceType__;
+    return CTServiceIdentifierMarvel;
 }
 
 - (CTAPIManagerRequestType)requestType
 {
-    return __RequestType__;
+    return CTAPIManagerRequestTypeGet;
 }
 
 #pragma mark - CTAPIManagerValidator

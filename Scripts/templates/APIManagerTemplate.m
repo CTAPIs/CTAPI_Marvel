@@ -7,6 +7,7 @@
 //
 
 #import "__APIManagerFileName__.h"
+#import "CTMarvelService.h"
 
 NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API param name#>";
 
@@ -38,12 +39,12 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 
 - (NSString *)serviceIdentifier
 {
-    return <# service identifier #>;
+    return CTServiceIdentifierMarvel;
 }
 
 - (CTAPIManagerRequestType)requestType
 {
-    return __RequestType__;
+    return CTAPIManagerRequestTypeGet;
 }
 
 #pragma mark - CTAPIManagerValidator
@@ -61,7 +62,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 - (BOOL)beforePerformFailWithResponse:(CTURLResponse *)response
 {
     [super beforePerformFailWithResponse:response];
-    self.errorMessage = <# fetch error message #>;
+    self.errorMessage = response.content[@"status"];
     return YES;
 }
 

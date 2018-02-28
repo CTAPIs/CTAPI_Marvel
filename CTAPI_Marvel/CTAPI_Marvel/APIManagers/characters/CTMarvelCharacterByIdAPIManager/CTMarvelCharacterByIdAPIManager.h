@@ -8,7 +8,7 @@
 
 #import <CTNetworking/CTNetworking.h>
 
-extern NSString * const kCTMarvelCharacterByIdAPIManagerParamKey<#API param name#>;
+extern NSString * const kCTMarvelCharacterByIdAPIManagerParamKeyCharacterID;
 
 @interface CTMarvelCharacterByIdAPIManager : CTAPIBaseManager <CTAPIManager>
 

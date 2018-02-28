@@ -7,8 +7,9 @@
 //
 
 #import "CTMarvelCharacterByIdAPIManager.h"
+#import "CTMarvelService.h"
 
-NSString * const kCTMarvelCharacterByIdAPIManagerParamKey<#API param name#> = @"<#API param name#>";
+NSString * const kCTMarvelCharacterByIdAPIManagerParamKeyCharacterID = @"kCTMarvelCharacterByIdAPIManagerParamKeyCharacterID";
 
 @interface CTMarvelCharacterByIdAPIManager () <CTAPIManagerValidator>
 
@@ -33,17 +34,18 @@ NSString * const kCTMarvelCharacterByIdAPIManagerParamKey<#API param name#> = @"
 #pragma mark - CTAPIManager
 - (NSString *)methodName
 {
-    return @"characters/characterId";
+    NSString *characterId = [self.paramSource paramsForApi:self][kCTMarvelCharacterByIdAPIManagerParamKeyCharacterID];
+    return [NSString stringWithFormat:@"characters/%@", characterId];
 }
 
 - (NSString *)serviceIdentifier
 {
-    return <# service identifier #>;
+    return CTServiceIdentifierMarvel;
 }
 
 - (CTAPIManagerRequestType)requestType
 {
-    return __RequestType__;
+    return CTAPIManagerRequestTypeGet;
 }
 
 #pragma mark - CTAPIManagerValidator
@@ -61,7 +63,7 @@ NSString * const kCTMarvelCharacterByIdAPIManagerParamKey<#API param name#> = @"
 - (BOOL)beforePerformFailWithResponse:(CTURLResponse *)response
 {
     [super beforePerformFailWithResponse:response];
-    self.errorMessage = <# fetch error message #>;
+    self.errorMessage = response.content[@"status"];
     return YES;
 }
 
