@@ -50,4 +50,4 @@ How To Use It
 @end
 ```
 
-- haa! you can use API now!
+- haa! you can use MARVEL API now!
