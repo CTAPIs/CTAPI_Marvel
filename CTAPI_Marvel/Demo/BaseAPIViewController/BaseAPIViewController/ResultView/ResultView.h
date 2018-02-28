@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CTNetworking/NSObject+AXNetworkingMethods.h>
 
 @interface ResultView : UIView
 

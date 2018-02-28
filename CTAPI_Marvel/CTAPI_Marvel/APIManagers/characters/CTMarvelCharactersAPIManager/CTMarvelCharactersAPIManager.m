@@ -25,7 +25,7 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
 
 @interface CTMarvelCharactersAPIManager () <CTAPIManagerValidator>
 
-@property (nonatomic, assign, readwrite) BOOL isFirstPage;
+@property (nonatomic, assign, readwrite) BOOL isCallingFirstPage;
 @property (nonatomic, assign, readwrite) BOOL isLastPage;
 @property (nonatomic, assign, readwrite) NSUInteger pageNumber;
 @property (nonatomic, strong, readwrite) NSString *errorMessage;
@@ -45,7 +45,7 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
         self.cachePolicy = CTAPIManagerCachePolicyNoCache;
         _pageSize = 20;
 		_pageNumber = 0;
-        _isFirstPage = YES;
+        _isCallingFirstPage = YES;
         _isLastPage = NO;
     }
     return self;
@@ -75,13 +75,16 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
 - (void)cleanData
 {
     [super cleanData];
-    self.isFirstPage = YES;
+    self.isCallingFirstPage = YES;
     self.pageNumber = 0;
 }
 
 - (NSDictionary *)reformParams:(NSDictionary *)params
 {
     NSMutableDictionary *result = [params mutableCopy];
+    if (result == nil) {
+        result = [[NSMutableDictionary alloc] init];
+    }
 
     if (result[@"limit"] == nil) {
         result[@"limit"] = @(self.pageSize);
@@ -90,7 +93,7 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
     }
     
     if (result[@"offset"] == nil) {
-        if (self.isFirstPage == NO) {
+        if (self.isCallingFirstPage == NO) {
             result[@"offset"] = @(self.pageNumber * self.pageSize);
         } else {
             result[@"offset"] = @(0);
@@ -105,7 +108,7 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
 #pragma mark - interceptors
 - (BOOL)beforePerformSuccessWithResponse:(CTURLResponse *)response
 {
-    self.isFirstPage = NO;
+    self.isCallingFirstPage = NO;
     NSInteger totalPageCount = ceil([response.content[@"data"][@"total"] doubleValue]/(double)self.pageSize);
     if (self.pageNumber == totalPageCount) {
         self.isLastPage = YES;

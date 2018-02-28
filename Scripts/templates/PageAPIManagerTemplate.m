@@ -13,7 +13,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 
 @interface __APIManagerFileName__ () <CTAPIManagerValidator>
 
-@property (nonatomic, assign, readwrite) BOOL isFirstPage;
+@property (nonatomic, assign, readwrite) BOOL isCallingFirstPage;
 @property (nonatomic, assign, readwrite) BOOL isLastPage;
 @property (nonatomic, assign, readwrite) NSUInteger pageNumber;
 @property (nonatomic, strong, readwrite) NSString *errorMessage;
@@ -33,7 +33,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
         self.cachePolicy = __CachePolicy__;
         _pageSize = 10;
 		_pageNumber = 0;
-        _isFirstPage = YES;
+        _isCallingFirstPage = YES;
         _isLastPage = NO;
     }
     return self;
@@ -63,13 +63,16 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 - (void)cleanData
 {
     [super cleanData];
-    self.isFirstPage = YES;
+    self.isCallingFirstPage = YES;
     self.pageNumber = 0;
 }
 
 - (NSDictionary *)reformParams:(NSDictionary *)params
 {
     NSMutableDictionary *result = [params mutableCopy];
+    if (result == nil) {
+        result = [[NSMutableDictionary alloc] init];
+    }
 
     if (result[<# key of page size #>] == nil) {
         result[<# key of page size #>] = @(self.pageSize);
@@ -78,7 +81,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
     }
     
     if (result[<# key of page number #>] == nil) {
-        if (self.isFirstPage == NO) {
+        if (self.isCallingFirstPage == NO) {
             result[<# key of page number #>] = @(self.pageNumber);
         } else {
             result[<# key of page number #>] = @(0);
@@ -93,7 +96,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 #pragma mark - interceptors
 - (BOOL)beforePerformSuccessWithResponse:(CTURLResponse *)response
 {
-    self.isFirstPage = NO;
+    self.isCallingFirstPage = NO;
     NSInteger totalPageCount = ceil([response.content[@"data"][@"total"] doubleValue]/(double)self.pageSize)
     if (self.pageNumber == totalPageCount) {
         self.isLastPage = YES;

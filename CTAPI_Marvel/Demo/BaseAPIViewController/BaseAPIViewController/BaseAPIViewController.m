@@ -11,6 +11,7 @@
 #import <HandyFrame/UIView+LayoutMethods.h>
 #import "BLAPIManagerTableViewCell.h"
 #import "ResultView.h"
+#import "CTPageAPIViewController.h"
 
 NSString * const kBaseAPIViewControllerUITableViewCellIdentifier = @"kBaseAPIViewControllerUITableViewCellIdentifier";
 NSString * const kBaseAPIViewControllerDataSourceTitle = @"kBaseAPIViewControllerDataSourceTitle";
@@ -70,9 +71,16 @@ NSString * const kBaseAPIViewControllerDataSourceClass = @"kBaseAPIViewControlle
     Class apiManagerClass = self.dataSource[indexPath.row][kBaseAPIViewControllerDataSourceClass];
     self.apiManager = [[apiManagerClass alloc] init];
     self.apiManager.paramSource = self.paramSource;
-    self.apiManager.delegate = self;
-    [self.apiManager loadData];
-    [ResultView showInView:self.view];
+    
+    if ([self.apiManager conformsToProtocol:@protocol(CTPagableAPIManager)]) {
+        CTPageAPIViewController *viewController = [[CTPageAPIViewController alloc] init];
+        viewController.apiManager = (CTAPIBaseManager <CTPagableAPIManager> *)self.apiManager;
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else {
+        self.apiManager.delegate = self;
+        [self.apiManager loadData];
+        [ResultView showInView:self.view];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

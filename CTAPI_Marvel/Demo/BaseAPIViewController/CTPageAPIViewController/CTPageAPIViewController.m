@@ -7,10 +7,10 @@
 //
 
 #import "CTPageAPIViewController.h"
-
+#import "ResultView.h"
 #import <HandyFrame/UIView+LayoutMethods.h>
 
-@interface CTPageAPIViewController () <CTAPIManagerCallBackDelegate, CTAPIManagerInterceptor, CTAPIManagerParamSource>
+@interface CTPageAPIViewController () <CTAPIManagerCallBackDelegate, CTAPIManagerInterceptor>
 
 @property (nonatomic, strong) UILabel *statusLabel;
 @property (nonatomic, strong) UIButton *loadFirstPageButton;
@@ -47,6 +47,7 @@
     [self.loadNextPageButton top:50 FromView:self.loadFirstPageButton];
 }
 
+#pragma mark - CTAPIManagerInterceptor
 - (void)manager:(CTAPIBaseManager *)manager didReceiveResponse:(CTURLResponse *)response
 {
     if (self.apiManager.isLastPage) {
@@ -62,18 +63,13 @@
     } else {
         self.statusLabel.text = [NSString stringWithFormat:@"page %lu finished", (unsigned long)self.apiManager.currentPageNumber];
     }
+    [ResultView configWithString:manager.response.logString inView:self.view];
 }
 
 - (void)managerCallAPIDidFailed:(CTAPIBaseManager *)manager
 {
     self.statusLabel.text = @"fail";
-}
-
-#pragma mark - CTAPIManagerParamSource
-- (NSDictionary *)paramsForApi:(CTAPIBaseManager *)manager
-{
-#warning todo
-    return @{};
+    [ResultView configWithString:manager.response.logString inView:self.view];
 }
 
 #pragma mark - event response
@@ -81,12 +77,14 @@
 {
     self.statusLabel.text = @"loading...";
     [self.apiManager loadData];
+    [ResultView showInView:self.view];
 }
 
 - (void)didTappedLoadNextPageButton:(UIButton *)button
 {
     self.statusLabel.text = @"loading...";
     [self.apiManager loadNextPage];
+    [ResultView showInView:self.view];
 }
 
 #pragma mark - getter and setters
