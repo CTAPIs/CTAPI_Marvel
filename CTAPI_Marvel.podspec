@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     this is CTAPI_Marvel
                    DESC
 
-  s.homepage     = "https://github.com/casatwy/CTAPI_Marvel"
+  s.homepage     = "https://github.com/CTAPIs/CTAPI_Marvel"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/casatwy/CTAPI_Marvel.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/CTAPIs/CTAPI_Marvel.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
