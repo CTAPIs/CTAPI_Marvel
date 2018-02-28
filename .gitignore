@@ -1,0 +1,7 @@
+CTAPI_Marvel.xcodeproj/xcuserdata/
+CTAPI_Marvel.xcworkspace/
+Pods/
+*.swp
+.DS_Store
+CTAPI_Marvel.xcodeproj/project.xcworkspace/xcuserdata/
+Podfile.lock
