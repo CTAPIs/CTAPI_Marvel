@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <BLNetworking/CTAPIBaseManager.h>
+#import <CTNetworking/CTNetworking.h>
 
-@interface BLPageAPIViewController : UIViewController
+@interface CTPageAPIViewController : UIViewController
 
 @property (nonatomic, strong) CTAPIBaseManager <CTPagableAPIManager> *apiManager;
 

@@ -3,21 +3,21 @@
 Cyan='\033[0;36m'
 Default='\033[0;m'
 
-groupPath="../BLAPIManagers/BLAPIManagers/APIManagers"
+groupPath="../CTAPI_Marvel/CTAPI_Marvel"
 group=""
 fileName=""
 methodName=""
 confirmed="n"
 year=`date +%Y`
 
-serviceType=""
-serviceTypeList=("kCTServiceBLHTTPSService" "kCTServiceBLOpenAPIService")
+# serviceIdentifier=""
+# serviceIdentifierList=("kCTServiceBLHTTPSService" "kCTServiceBLOpenAPIService")
 
 cachePolicy=""
 cachePolicyList=("CTAPIManagerCachePolicyNoCache" "CTAPIManagerCachePolicyMemory" "CTAPIManagerCachePolicyDisk" "CTAPIManagerCachePolicyMemory | CTAPIManagerCachePolicyDisk")
 
-requestType=""
-requestTypeList=("CTAPIManagerRequestTypePost" "CTAPIManagerRequestTypeGet")
+requestType="CTAPIManagerRequestTypeGet"
+# requestTypeList=("CTAPIManagerRequestTypePost" "CTAPIManagerRequestTypeGet")
 
 getGroup() {
     echo "current group list:"
@@ -46,7 +46,7 @@ getMethodName() {
     fi
 }
 
-getServiceType() {
+getServiceIdentifier() {
     echo -e "\n"
     length=${#serviceTypeList[@]}
     for ((index=0; index<length; index++)); do
@@ -56,10 +56,10 @@ getServiceType() {
     read -p "Enter API service type (enter the index) :" serviceTypeIndex
 
     if test $serviceTypeIndex -lt $length; then
-        serviceType=${serviceTypeList[${serviceTypeIndex}]}
+        serviceIdentifier=${serviceTypeList[${serviceTypeIndex}]}
     else
         echo -e "\n\n the index must less than ${length}\n"
-        getServiceType
+        getServiceIdentifier
     fi
 }
 
@@ -101,20 +101,20 @@ getInfomation() {
 	echo -e "\n"
     getMethodName
 	echo -e "\n"
-    grep -rHn $methodName ../ && echo -e "\n${Cyan}I have found same API manager${Default}" && exit 0
+    grep -rHn $methodName ${groupPath} && echo -e "\n${Cyan}I have found same API manager${Default}" && exit 0
     getGroup
     getAPIName
-    getServiceType
+    # getServiceIdentifier
     getCachePolicy
-    getRequestType
+    # getRequestType
 
     echo -e "\n${Default}================================================"
     echo -e "  group       :  ${Cyan}${group}${Default}"
     echo -e "  fileName    :  ${Cyan}${fileName}${Default}"
     echo -e "  methodName  :  ${Cyan}${methodName}${Default}"
-    echo -e "  serviceType :  ${Cyan}${serviceType}${Default}"
+    # echo -e "  serviceIdentifier :  ${Cyan}${serviceIdentifier}${Default}"
     echo -e "  cachePolicy :  ${Cyan}${cachePolicy}${Default}"
-    echo -e "  requestType :  ${Cyan}${requestType}${Default}"
+    # echo -e "  requestType :  ${Cyan}${requestType}${Default}"
     echo -e "================================================\n"
 }
 
@@ -142,6 +142,6 @@ sed -i "" "s:__year__:${year}:g"                    "$headerFilePath"
 sed -i "" "s:__year__:${year}:g"                    "$implementFilePath"
 sed -i "" "s:__APIManagerFileName__:${fileName}:g"  "$implementFilePath"
 sed -i "" "s:__MethodName__:${methodName}:g"        "$implementFilePath"
-sed -i "" "s:__ServiceType__:${serviceType}:g"      "$implementFilePath"
+# sed -i "" "s:__ServiceType__:${serviceIdentifier}:g"      "$implementFilePath"
 sed -i "" "s:__CachePolicy__:${cachePolicy}:g"      "$implementFilePath"
-sed -i "" "s:__RequestType__:${requestType}:g"      "$implementFilePath"
+# sed -i "" "s:__RequestType__:${requestType}:g"      "$implementFilePath"

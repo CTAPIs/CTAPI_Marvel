@@ -6,12 +6,11 @@
 //  Copyright © 2016年 casa. All rights reserved.
 //
 
-#import "BLPageAPIViewController.h"
+#import "CTPageAPIViewController.h"
 
 #import <HandyFrame/UIView+LayoutMethods.h>
-#import "BLQueryBrandActivityListAPIManager.h"
 
-@interface BLPageAPIViewController () <CTAPIManagerCallBackDelegate, CTAPIManagerInterceptor, CTAPIManagerParamSource>
+@interface CTPageAPIViewController () <CTAPIManagerCallBackDelegate, CTAPIManagerInterceptor, CTAPIManagerParamSource>
 
 @property (nonatomic, strong) UILabel *statusLabel;
 @property (nonatomic, strong) UIButton *loadFirstPageButton;
@@ -19,7 +18,7 @@
 
 @end
 
-@implementation BLPageAPIViewController
+@implementation CTPageAPIViewController
 
 #pragma mark - life cycle
 - (void)viewDidLoad
@@ -73,20 +72,7 @@
 #pragma mark - CTAPIManagerParamSource
 - (NSDictionary *)paramsForApi:(CTAPIBaseManager *)manager
 {
-    if ([manager isKindOfClass:[BLQueryBrandActivityListAPIManager class]]) {
-        NSString *actNo = nil;
-        if ([actNo length]) {
-            return @{
-                     kBLQueryBrandActivityListAPIManagerParamKeyActivityCategory:kBLQueryBrandActivityListAPIManagerActivityCategoryBrand,
-                     kBLQueryBrandActivityListAPIManagerParamKeyActivitiyNo:actNo,
-                     kBLQueryBrandActivityListAPIManagerParamKeyQueryType:kBLQueryBrandActivityListAPIManagerActivityListQueryTypeSelectedActivity
-                     };
-        }
-        return @{
-                 kBLQueryBrandActivityListAPIManagerParamKeyActivityCategory:kBLQueryBrandActivityListAPIManagerActivityCategoryBrand,
-                 kBLQueryBrandActivityListAPIManagerParamKeyQueryType:kBLQueryBrandActivityListAPIManagerActivityListQueryTypeAll
-                 };
-    }
+#warning todo
     return @{};
 }
 

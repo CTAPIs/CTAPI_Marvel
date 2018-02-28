@@ -17,6 +17,7 @@
 		4A3CC51720464BFE009F3CF1 /* CTPageAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC51420464BFE009F3CF1 /* CTPageAPIViewController.m */; };
 		4A3CC51E20464C3A009F3CF1 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC51A20464C3A009F3CF1 /* ResultView.m */; };
 		4A3CC51F20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC51D20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m */; };
+		4A3CC52320464FCA009F3CF1 /* Target_CTMarvelKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC52220464FCA009F3CF1 /* Target_CTMarvelKey.m */; };
 		A920CC7CE957ECDC642F301A /* libPods-CTAPI_Marvel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BD973026D37D6C2B6B7439 /* libPods-CTAPI_Marvel.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 		4A3CC51A20464C3A009F3CF1 /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
 		4A3CC51C20464C3A009F3CF1 /* BLAPIManagerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAPIManagerTableViewCell.h; sourceTree = "<group>"; };
 		4A3CC51D20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAPIManagerTableViewCell.m; sourceTree = "<group>"; };
+		4A3CC52120464FCA009F3CF1 /* Target_CTMarvelKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_CTMarvelKey.h; sourceTree = "<group>"; };
+		4A3CC52220464FCA009F3CF1 /* Target_CTMarvelKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_CTMarvelKey.m; sourceTree = "<group>"; };
 		50C7D1A614AA4EAD6A530A61 /* Pods-CTAPI_Marvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTAPI_Marvel.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTAPI_Marvel/Pods-CTAPI_Marvel.release.xcconfig"; sourceTree = "<group>"; };
 		B0BD973026D37D6C2B6B7439 /* libPods-CTAPI_Marvel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CTAPI_Marvel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +113,7 @@
 		4A3CC50720464B78009F3CF1 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4A3CC52020464FB7009F3CF1 /* TargetForKey */,
 				4A3CC50820464B78009F3CF1 /* APIControllers */,
 				4A3CC50F20464B78009F3CF1 /* BaseAPIViewController */,
 			);
@@ -194,8 +198,8 @@
 		4A3CC51320464BFE009F3CF1 /* CTPageAPIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4A3CC51420464BFE009F3CF1 /* CTPageAPIViewController.m */,
 				4A3CC51520464BFE009F3CF1 /* CTPageAPIViewController.h */,
+				4A3CC51420464BFE009F3CF1 /* CTPageAPIViewController.m */,
 			);
 			path = CTPageAPIViewController;
 			sourceTree = "<group>";
@@ -216,6 +220,15 @@
 				4A3CC51D20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m */,
 			);
 			path = BLAPIManagerTableViewCell;
+			sourceTree = "<group>";
+		};
+		4A3CC52020464FB7009F3CF1 /* TargetForKey */ = {
+			isa = PBXGroup;
+			children = (
+				4A3CC52120464FCA009F3CF1 /* Target_CTMarvelKey.h */,
+				4A3CC52220464FCA009F3CF1 /* Target_CTMarvelKey.m */,
+			);
+			path = TargetForKey;
 			sourceTree = "<group>";
 		};
 		C2221C3585E79F919392FF87 /* Pods */ = {
@@ -356,6 +369,7 @@
 				4A3CC51720464BFE009F3CF1 /* CTPageAPIViewController.m in Sources */,
 				4A3CC500204646C8009F3CF1 /* main.m in Sources */,
 				4A3CC51E20464C3A009F3CF1 /* ResultView.m in Sources */,
+				4A3CC52320464FCA009F3CF1 /* Target_CTMarvelKey.m in Sources */,
 				4A3CC51620464BFE009F3CF1 /* BaseAPIViewController.m in Sources */,
 				4A3CC51F20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m in Sources */,
 				4A3CC4F2204646C8009F3CF1 /* AppDelegate.m in Sources */,
