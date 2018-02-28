@@ -259,8 +259,8 @@
 		4A3CC52E20465418009F3CF1 /* characters */ = {
 			isa = PBXGroup;
 			children = (
-				4A3CC52F20465418009F3CF1 /* CTMarvelCharacterByIdAPIManager */,
 				4A3CC53220465418009F3CF1 /* CTMarvelCharactersAPIManager */,
+				4A3CC52F20465418009F3CF1 /* CTMarvelCharacterByIdAPIManager */,
 			);
 			path = characters;
 			sourceTree = "<group>";
@@ -277,8 +277,8 @@
 		4A3CC53220465418009F3CF1 /* CTMarvelCharactersAPIManager */ = {
 			isa = PBXGroup;
 			children = (
-				4A3CC53320465418009F3CF1 /* CTMarvelCharactersAPIManager.m */,
 				4A3CC53420465418009F3CF1 /* CTMarvelCharactersAPIManager.h */,
+				4A3CC53320465418009F3CF1 /* CTMarvelCharactersAPIManager.m */,
 			);
 			path = CTMarvelCharactersAPIManager;
 			sourceTree = "<group>";

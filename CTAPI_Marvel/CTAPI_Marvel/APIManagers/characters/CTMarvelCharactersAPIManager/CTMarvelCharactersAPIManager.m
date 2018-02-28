@@ -9,6 +9,20 @@
 #import "CTMarvelCharactersAPIManager.h"
 #import "CTMarvelService.h"
 
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamName = @"name";
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamNameStartsWith = @"nameStartsWith";
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamModifiedSince = @"modifiedSince";
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamComicIDList = @"comics";
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamSeriesIDList = @"series";
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamEventIDList = @"events";
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamStoryIDList = @"stories";
+
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy = @"orderBy";
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderByNameASC = @"name";
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderByNameDESC = @"-name";
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderByModifiedASC = @"modified";
+NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderByModifiedDESC = @"-modified";
+
 @interface CTMarvelCharactersAPIManager () <CTAPIManagerValidator>
 
 @property (nonatomic, assign, readwrite) BOOL isFirstPage;
