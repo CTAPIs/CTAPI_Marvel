@@ -55,4 +55,4 @@ How To Use It
 SceenShot
 =========
 
-!(./screenshot/screenshot.gif)
+![screen shot](./screenshot/screenshot.gif)
