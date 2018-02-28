@@ -11,6 +11,7 @@
 extern NSString * const kCTMarvelCharactersAPIManagerOptionalParamName;
 extern NSString * const kCTMarvelCharactersAPIManagerOptionalParamNameStartsWith;
 extern NSString * const kCTMarvelCharactersAPIManagerOptionalParamModifiedSince;
+
 extern NSString * const kCTMarvelCharactersAPIManagerOptionalParamComicIDList;
 extern NSString * const kCTMarvelCharactersAPIManagerOptionalParamSeriesIDList;
 extern NSString * const kCTMarvelCharactersAPIManagerOptionalParamEventIDList;

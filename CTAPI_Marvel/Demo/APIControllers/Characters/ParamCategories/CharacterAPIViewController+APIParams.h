@@ -13,5 +13,6 @@
 
 - (NSDictionary *)paramsForCharacterById;
 - (NSDictionary *)paramsForCharacterList;
+- (NSDictionary *)paramsForComicList;
 
 @end

@@ -74,22 +74,22 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
         result = [[NSMutableDictionary alloc] init];
     }
 
-    if (result[<# key of page size #>] == nil) {
-        result[<# key of page size #>] = @(self.pageSize);
+    if (result[@"limit"] == nil) {
+        result[@"limit"] = @(self.pageSize);
     } else {
-        self.pageSize = [result[<# key of page size #>] integerValue];
+        self.pageSize = [result[@"limit"] integerValue];
     }
-    
-    if (result[<# key of page number #>] == nil) {
+
+    if (result[@"offset"] == nil) {
         if (self.isFirstPage == NO) {
-            result[<# key of page number #>] = @(self.pageNumber);
+            result[@"offset"] = @(self.pageNumber * self.pageSize);
         } else {
-            result[<# key of page number #>] = @(0);
+            result[@"offset"] = @(0);
         }
     } else {
-        self.pageNumber = [result[<# key of page number #>] unsignedIntegerValue];
+        self.pageNumber = [result[@"offset"] unsignedIntegerValue] / self.pageSize;
     }
-    
+
     return result;
 }
 
@@ -97,8 +97,8 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 - (BOOL)beforePerformSuccessWithResponse:(CTURLResponse *)response
 {
     self.isFirstPage = NO;
-    NSInteger totalPageCount = ceil([response.content[@"data"][@"total"] doubleValue]/(double)self.pageSize)
-    if (self.pageNumber == totalPageCount) {
+    NSInteger totalPageCount = ceil([response.content[@"data"][@"total"] doubleValue]/(double)self.pageSize);
+    if (self.pageNumber == totalPageCount - 1) {
         self.isLastPage = YES;
     } else {
         self.isLastPage = NO;

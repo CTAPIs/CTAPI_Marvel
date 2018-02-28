@@ -1,0 +1,67 @@
+//
+//  CTMarvelCharacterComicsAPIManager.h
+//  APIManagers
+//
+//  Created by casa's script.
+//  Copyright © 2018年 casa. All rights reserved.
+//
+
+#import <CTNetworking/CTNetworking.h>
+
+extern NSString * const kCTMarvelCharacterComicsAPIManagerRequiredParamKeyCharacterId;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyNoVariants;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyDateRange;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyTitle;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyTitleStartWith;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyStartYear;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyIssueNumber;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyDiamondCode;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyDigitalId;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyUPC;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyISBN;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyEAN;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyISSN;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyHasDigitalIssue;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyModifiedSince;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyCreators;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeySeries;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyEvents;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyStories;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeySharedAppearances;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyCollaborators;
+
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormat;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormat_value_Comic;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormat_value_Magzine;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormat_value_TradePaperback;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormat_value_Hardcover;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormat_value_Digest;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormat_value_GraphicNovel;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormat_value_DigitalComic;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormat_value_InfiniteComic;
+
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormatType;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormatType_Value_Comic;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyFormatType_Value_Collection;
+
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyDateDescriptor;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyDateDescriptor_Value_LastWeek;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyDateDescriptor_Value_ThisWeek;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyDateDescriptor_Value_NextWeek;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyDateDescriptor_Value_ThisMonth;
+
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyOrderBy;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyOrderBy_Value_FocDate;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyOrderBy_Value_OnsaleDate;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyOrderBy_Value_Title;
+extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyOrderBy_Value_IssueNumber;
+
+@interface CTMarvelCharacterComicsAPIManager : CTAPIBaseManager <CTAPIManager, CTPagableAPIManager>
+
+@property (nonatomic, assign) NSInteger pageSize;
+@property (nonatomic, assign, readonly) NSUInteger currentPageNumber;
+@property (nonatomic, assign, readonly) BOOL isLastPage;
+
+- (void)loadNextPage;
+
+@end

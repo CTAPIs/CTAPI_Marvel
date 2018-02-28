@@ -11,6 +11,7 @@
 
 #import "CTMarvelCharactersAPIManager.h"
 #import "CTMarvelCharacterByIdAPIManager.h"
+#import "CTMarvelCharacterComicsAPIManager.h"
 
 @interface CharacterAPIViewController () <CTAPIManagerParamSource>
 
@@ -27,6 +28,9 @@
     if ([manager isKindOfClass:[CTMarvelCharactersAPIManager class]]) {
         return [self paramsForCharacterList];
     }
+    if ([manager isKindOfClass:[CTMarvelCharacterComicsAPIManager class]]) {
+        return [self paramsForComicList];
+    }
     return nil;
 }
 
@@ -42,7 +46,11 @@
                         @{
                             kBaseAPIViewControllerDataSourceTitle:@"Marvel Character By ID",
                             kBaseAPIViewControllerDataSourceClass:[CTMarvelCharacterByIdAPIManager class]
-                            }
+                            },
+                        @{
+                            kBaseAPIViewControllerDataSourceTitle:@"Marvel Character Comic List By ID",
+                            kBaseAPIViewControllerDataSourceClass:[CTMarvelCharacterComicsAPIManager class]
+                            },
                         ];
     }
     return _dataSource;

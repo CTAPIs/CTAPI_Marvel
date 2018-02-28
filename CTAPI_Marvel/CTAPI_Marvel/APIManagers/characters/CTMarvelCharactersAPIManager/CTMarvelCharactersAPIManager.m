@@ -85,6 +85,26 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
     if (result == nil) {
         result = [[NSMutableDictionary alloc] init];
     }
+    
+    if ([params[kCTMarvelCharactersAPIManagerOptionalParamComicIDList] isKindOfClass:[NSArray class]]) {
+        NSArray *comicIdList = params[kCTMarvelCharactersAPIManagerOptionalParamComicIDList];
+        result[kCTMarvelCharactersAPIManagerOptionalParamComicIDList] = [comicIdList componentsJoinedByString:@","];
+    }
+    
+    if ([params[kCTMarvelCharactersAPIManagerOptionalParamSeriesIDList] isKindOfClass:[NSArray class]]) {
+        NSArray *series = params[kCTMarvelCharactersAPIManagerOptionalParamSeriesIDList];
+        result[kCTMarvelCharactersAPIManagerOptionalParamSeriesIDList] = [series componentsJoinedByString:@","];
+    }
+    
+    if ([params[kCTMarvelCharactersAPIManagerOptionalParamEventIDList] isKindOfClass:[NSArray class]]) {
+        NSArray *events = params[kCTMarvelCharactersAPIManagerOptionalParamEventIDList];
+        result[kCTMarvelCharactersAPIManagerOptionalParamEventIDList] = [events componentsJoinedByString:@","];
+    }
+    
+    if ([params[kCTMarvelCharactersAPIManagerOptionalParamStoryIDList] isKindOfClass:[NSArray class]]) {
+        NSArray *stories = params[kCTMarvelCharactersAPIManagerOptionalParamStoryIDList];
+        result[kCTMarvelCharactersAPIManagerOptionalParamStoryIDList] = [stories componentsJoinedByString:@","];
+    }
 
     if (result[@"limit"] == nil) {
         result[@"limit"] = @(self.pageSize);

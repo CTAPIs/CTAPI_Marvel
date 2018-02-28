@@ -25,6 +25,7 @@
 		4A3CC5472046563D009F3CF1 /* CTMarvelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC5462046563D009F3CF1 /* CTMarvelService.m */; };
 		4A3CC54A20465CD1009F3CF1 /* CharacterAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC54920465CD1009F3CF1 /* CharacterAPIViewController.m */; };
 		4A3CC54E20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC54D20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m */; };
+		4A77491D20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A77491C20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m */; };
 		A920CC7CE957ECDC642F301A /* libPods-CTAPI_Marvel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BD973026D37D6C2B6B7439 /* libPods-CTAPI_Marvel.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,8 @@
 		4A3CC54920465CD1009F3CF1 /* CharacterAPIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterAPIViewController.m; sourceTree = "<group>"; };
 		4A3CC54C20465D55009F3CF1 /* CharacterAPIViewController+APIParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CharacterAPIViewController+APIParams.h"; sourceTree = "<group>"; };
 		4A3CC54D20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CharacterAPIViewController+APIParams.m"; sourceTree = "<group>"; };
+		4A77491B20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMarvelCharacterComicsAPIManager.h; sourceTree = "<group>"; };
+		4A77491C20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMarvelCharacterComicsAPIManager.m; sourceTree = "<group>"; };
 		50C7D1A614AA4EAD6A530A61 /* Pods-CTAPI_Marvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTAPI_Marvel.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTAPI_Marvel/Pods-CTAPI_Marvel.release.xcconfig"; sourceTree = "<group>"; };
 		B0BD973026D37D6C2B6B7439 /* libPods-CTAPI_Marvel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CTAPI_Marvel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -259,6 +262,7 @@
 		4A3CC52E20465418009F3CF1 /* characters */ = {
 			isa = PBXGroup;
 			children = (
+				4A77491A20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager */,
 				4A3CC53220465418009F3CF1 /* CTMarvelCharactersAPIManager */,
 				4A3CC52F20465418009F3CF1 /* CTMarvelCharacterByIdAPIManager */,
 			);
@@ -336,6 +340,15 @@
 				4A3CC54D20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m */,
 			);
 			path = ParamCategories;
+			sourceTree = "<group>";
+		};
+		4A77491A20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				4A77491B20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.h */,
+				4A77491C20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m */,
+			);
+			path = CTMarvelCharacterComicsAPIManager;
 			sourceTree = "<group>";
 		};
 		C2221C3585E79F919392FF87 /* Pods */ = {
@@ -484,6 +497,7 @@
 				4A3CC53D204654D0009F3CF1 /* Target_CTMarvelKey.m in Sources */,
 				4A3CC51620464BFE009F3CF1 /* BaseAPIViewController.m in Sources */,
 				4A3CC51F20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m in Sources */,
+				4A77491D20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m in Sources */,
 				4A3CC54A20465CD1009F3CF1 /* CharacterAPIViewController.m in Sources */,
 				4A3CC5472046563D009F3CF1 /* CTMarvelService.m in Sources */,
 				4A3CC4F2204646C8009F3CF1 /* AppDelegate.m in Sources */,
