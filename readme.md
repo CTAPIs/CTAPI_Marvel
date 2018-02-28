@@ -50,7 +50,7 @@ How To Use It
 @end
 ```
 
-- haa! you can use MARVEL API now!
+- haa! you can use MARVEL API now! read [demos](https://github.com/CTAPIs/CTAPI_Marvel/tree/master/CTAPI_Marvel/Demo/APIControllers) for how to use the APIManagers
 
 SceenShot
 =========
