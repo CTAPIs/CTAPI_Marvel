@@ -51,3 +51,8 @@ How To Use It
 ```
 
 - haa! you can use MARVEL API now!
+
+SceenShot
+=========
+
+!(./screenshot/screenshot.gif)
