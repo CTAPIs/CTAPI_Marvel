@@ -25,7 +25,7 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
 
 @interface CTMarvelCharactersAPIManager () <CTAPIManagerValidator>
 
-@property (nonatomic, assign, readwrite) BOOL isCallingFirstPage;
+@property (nonatomic, assign, readwrite) BOOL isFirstPage;
 @property (nonatomic, assign, readwrite) BOOL isLastPage;
 @property (nonatomic, assign, readwrite) NSUInteger pageNumber;
 @property (nonatomic, strong, readwrite) NSString *errorMessage;
@@ -45,7 +45,7 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
         self.cachePolicy = CTAPIManagerCachePolicyNoCache;
         _pageSize = 20;
 		_pageNumber = 0;
-        _isCallingFirstPage = YES;
+        _isFirstPage = YES;
         _isLastPage = NO;
     }
     return self;
@@ -75,7 +75,7 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
 - (void)cleanData
 {
     [super cleanData];
-    self.isCallingFirstPage = YES;
+    self.isFirstPage = YES;
     self.pageNumber = 0;
 }
 
@@ -93,7 +93,7 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
     }
     
     if (result[@"offset"] == nil) {
-        if (self.isCallingFirstPage == NO) {
+        if (self.isFirstPage == NO) {
             result[@"offset"] = @(self.pageNumber * self.pageSize);
         } else {
             result[@"offset"] = @(0);
@@ -108,9 +108,9 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
 #pragma mark - interceptors
 - (BOOL)beforePerformSuccessWithResponse:(CTURLResponse *)response
 {
-    self.isCallingFirstPage = NO;
+    self.isFirstPage = NO;
     NSInteger totalPageCount = ceil([response.content[@"data"][@"total"] doubleValue]/(double)self.pageSize);
-    if (self.pageNumber == totalPageCount) {
+    if (self.pageNumber == totalPageCount - 1) {
         self.isLastPage = YES;
     } else {
         self.isLastPage = NO;
@@ -156,7 +156,7 @@ NSString * const kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderBy
 #pragma mark - getters and setters
 - (NSUInteger)currentPageNumber
 {
-    return self.pageNumber - 1;
+    return self.pageNumber;
 }
 
 @end

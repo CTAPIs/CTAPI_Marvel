@@ -8,6 +8,7 @@
 
 #import "CharacterAPIViewController+APIParams.h"
 #import "CTMarvelCharacterByIdAPIManager.h"
+#import "CTMarvelCharactersAPIManager.h"
 
 @implementation CharacterAPIViewController (APIParams)
 
@@ -18,7 +19,10 @@
 
 - (NSDictionary *)paramsForCharacterList
 {
-    return nil;
+    return @{
+             kCTMarvelCharactersAPIManagerOptionalParamNameStartsWith:@"b",
+             kCTMarvelCharactersAPIManagerOptionalParamOrderBy:kCTMarvelCharactersAPIManagerOptionalParamOrderBy_Value_orderByNameASC
+             };
 }
 
 @end

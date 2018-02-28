@@ -47,14 +47,6 @@
     [self.loadNextPageButton top:50 FromView:self.loadFirstPageButton];
 }
 
-#pragma mark - CTAPIManagerInterceptor
-- (void)manager:(CTAPIBaseManager *)manager didReceiveResponse:(CTURLResponse *)response
-{
-    if (self.apiManager.isLastPage) {
-        self.statusLabel.text = [NSString stringWithFormat:@"reached last page %lu", (unsigned long)self.apiManager.currentPageNumber];
-    }
-}
-
 #pragma mark - CTAPIManagerCallBackDelegate
 - (void)managerCallAPIDidSuccess:(CTAPIBaseManager *)manager
 {
@@ -83,8 +75,12 @@
 - (void)didTappedLoadNextPageButton:(UIButton *)button
 {
     self.statusLabel.text = @"loading...";
-    [self.apiManager loadNextPage];
-    [ResultView showInView:self.view];
+    if (self.apiManager.isLastPage) {
+        self.statusLabel.text = [NSString stringWithFormat:@"reached last page %lu", (unsigned long)self.apiManager.currentPageNumber];
+    } else {
+        [self.apiManager loadNextPage];
+        [ResultView showInView:self.view];
+    }
 }
 
 #pragma mark - getter and setters

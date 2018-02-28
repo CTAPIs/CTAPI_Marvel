@@ -13,7 +13,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 
 @interface __APIManagerFileName__ () <CTAPIManagerValidator>
 
-@property (nonatomic, assign, readwrite) BOOL isCallingFirstPage;
+@property (nonatomic, assign, readwrite) BOOL isFirstPage;
 @property (nonatomic, assign, readwrite) BOOL isLastPage;
 @property (nonatomic, assign, readwrite) NSUInteger pageNumber;
 @property (nonatomic, strong, readwrite) NSString *errorMessage;
@@ -33,7 +33,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
         self.cachePolicy = __CachePolicy__;
         _pageSize = 10;
 		_pageNumber = 0;
-        _isCallingFirstPage = YES;
+        _isFirstPage = YES;
         _isLastPage = NO;
     }
     return self;
@@ -63,7 +63,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 - (void)cleanData
 {
     [super cleanData];
-    self.isCallingFirstPage = YES;
+    self.isFirstPage = YES;
     self.pageNumber = 0;
 }
 
@@ -81,7 +81,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
     }
     
     if (result[<# key of page number #>] == nil) {
-        if (self.isCallingFirstPage == NO) {
+        if (self.isFirstPage == NO) {
             result[<# key of page number #>] = @(self.pageNumber);
         } else {
             result[<# key of page number #>] = @(0);
@@ -96,7 +96,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 #pragma mark - interceptors
 - (BOOL)beforePerformSuccessWithResponse:(CTURLResponse *)response
 {
-    self.isCallingFirstPage = NO;
+    self.isFirstPage = NO;
     NSInteger totalPageCount = ceil([response.content[@"data"][@"total"] doubleValue]/(double)self.pageSize)
     if (self.pageNumber == totalPageCount) {
         self.isLastPage = YES;
@@ -144,7 +144,7 @@ NSString * const k__APIManagerFileName__ParamKey<#API param name#> = @"<#API par
 #pragma mark - getters and setters
 - (NSUInteger)currentPageNumber
 {
-    return self.pageNumber - 1;
+    return self.pageNumber;
 }
 
 @end
