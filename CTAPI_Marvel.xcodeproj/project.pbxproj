@@ -13,10 +13,6 @@
 		4A3CC4FA204646C8009F3CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3CC4F9204646C8009F3CF1 /* Assets.xcassets */; };
 		4A3CC4FD204646C8009F3CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3CC4FB204646C8009F3CF1 /* LaunchScreen.storyboard */; };
 		4A3CC500204646C8009F3CF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC4FF204646C8009F3CF1 /* main.m */; };
-		4A3CC51620464BFE009F3CF1 /* BaseAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC51120464BFE009F3CF1 /* BaseAPIViewController.m */; };
-		4A3CC51720464BFE009F3CF1 /* CTPageAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC51420464BFE009F3CF1 /* CTPageAPIViewController.m */; };
-		4A3CC51E20464C3A009F3CF1 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC51A20464C3A009F3CF1 /* ResultView.m */; };
-		4A3CC51F20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC51D20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m */; };
 		4A3CC53620465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC53020465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.m */; };
 		4A3CC53720465418009F3CF1 /* CTMarvelCharactersAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC53320465418009F3CF1 /* CTMarvelCharactersAPIManager.m */; };
 		4A3CC53D204654D0009F3CF1 /* Target_CTMarvelKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC53C204654D0009F3CF1 /* Target_CTMarvelKey.m */; };
@@ -41,14 +37,6 @@
 		4A3CC4FC204646C8009F3CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A3CC4FE204646C8009F3CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A3CC4FF204646C8009F3CF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4A3CC51120464BFE009F3CF1 /* BaseAPIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAPIViewController.m; sourceTree = "<group>"; };
-		4A3CC51220464BFE009F3CF1 /* BaseAPIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAPIViewController.h; sourceTree = "<group>"; };
-		4A3CC51420464BFE009F3CF1 /* CTPageAPIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPageAPIViewController.m; sourceTree = "<group>"; };
-		4A3CC51520464BFE009F3CF1 /* CTPageAPIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPageAPIViewController.h; sourceTree = "<group>"; };
-		4A3CC51920464C3A009F3CF1 /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultView.h; sourceTree = "<group>"; };
-		4A3CC51A20464C3A009F3CF1 /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
-		4A3CC51C20464C3A009F3CF1 /* BLAPIManagerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAPIManagerTableViewCell.h; sourceTree = "<group>"; };
-		4A3CC51D20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAPIManagerTableViewCell.m; sourceTree = "<group>"; };
 		4A3CC53020465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMarvelCharacterByIdAPIManager.m; sourceTree = "<group>"; };
 		4A3CC53120465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMarvelCharacterByIdAPIManager.h; sourceTree = "<group>"; };
 		4A3CC53320465418009F3CF1 /* CTMarvelCharactersAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMarvelCharactersAPIManager.m; sourceTree = "<group>"; };
@@ -141,7 +129,6 @@
 			children = (
 				4A3CC538204654D0009F3CF1 /* Target */,
 				4A3CC50820464B78009F3CF1 /* APIControllers */,
-				4A3CC50F20464B78009F3CF1 /* BaseAPIViewController */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -202,53 +189,6 @@
 				4A3CC54920465CD1009F3CF1 /* CharacterAPIViewController.m */,
 			);
 			path = Characters;
-			sourceTree = "<group>";
-		};
-		4A3CC50F20464B78009F3CF1 /* BaseAPIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4A3CC51020464BFE009F3CF1 /* BaseAPIViewController */,
-				4A3CC51320464BFE009F3CF1 /* CTPageAPIViewController */,
-			);
-			path = BaseAPIViewController;
-			sourceTree = "<group>";
-		};
-		4A3CC51020464BFE009F3CF1 /* BaseAPIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4A3CC51B20464C3A009F3CF1 /* BLAPIManagerTableViewCell */,
-				4A3CC51820464C3A009F3CF1 /* ResultView */,
-				4A3CC51220464BFE009F3CF1 /* BaseAPIViewController.h */,
-				4A3CC51120464BFE009F3CF1 /* BaseAPIViewController.m */,
-			);
-			path = BaseAPIViewController;
-			sourceTree = "<group>";
-		};
-		4A3CC51320464BFE009F3CF1 /* CTPageAPIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4A3CC51520464BFE009F3CF1 /* CTPageAPIViewController.h */,
-				4A3CC51420464BFE009F3CF1 /* CTPageAPIViewController.m */,
-			);
-			path = CTPageAPIViewController;
-			sourceTree = "<group>";
-		};
-		4A3CC51820464C3A009F3CF1 /* ResultView */ = {
-			isa = PBXGroup;
-			children = (
-				4A3CC51920464C3A009F3CF1 /* ResultView.h */,
-				4A3CC51A20464C3A009F3CF1 /* ResultView.m */,
-			);
-			path = ResultView;
-			sourceTree = "<group>";
-		};
-		4A3CC51B20464C3A009F3CF1 /* BLAPIManagerTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				4A3CC51C20464C3A009F3CF1 /* BLAPIManagerTableViewCell.h */,
-				4A3CC51D20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m */,
-			);
-			path = BLAPIManagerTableViewCell;
 			sourceTree = "<group>";
 		};
 		4A3CC52D20465418009F3CF1 /* APIManagers */ = {
@@ -489,14 +429,10 @@
 				4A3CC540204654E0009F3CF1 /* Target_CTAppContext.m in Sources */,
 				4A3CC54E20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m in Sources */,
 				4A3CC4F5204646C8009F3CF1 /* ViewController.m in Sources */,
-				4A3CC51720464BFE009F3CF1 /* CTPageAPIViewController.m in Sources */,
 				4A3CC54320465551009F3CF1 /* Target_CTMarvelService.m in Sources */,
 				4A3CC500204646C8009F3CF1 /* main.m in Sources */,
 				4A3CC53620465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.m in Sources */,
-				4A3CC51E20464C3A009F3CF1 /* ResultView.m in Sources */,
 				4A3CC53D204654D0009F3CF1 /* Target_CTMarvelKey.m in Sources */,
-				4A3CC51620464BFE009F3CF1 /* BaseAPIViewController.m in Sources */,
-				4A3CC51F20464C3A009F3CF1 /* BLAPIManagerTableViewCell.m in Sources */,
 				4A77491D20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m in Sources */,
 				4A3CC54A20465CD1009F3CF1 /* CharacterAPIViewController.m in Sources */,
 				4A3CC5472046563D009F3CF1 /* CTMarvelService.m in Sources */,

@@ -6,7 +6,9 @@ target 'CTAPI_Marvel' do
   # use_frameworks!
  
   pod 'CTNetworking'
+  pod 'CTMediator'
   pod 'HandyFrame'
   pod 'AFNetworking'
+  pod 'CTAPI_DemoSuite'
 
 end

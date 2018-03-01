@@ -7,6 +7,7 @@
 //
 
 #import "BaseAPIViewController.h"
+#import <CTAPI_DemoSuite/CTAPI_DemoSuite.h>
 
 @interface CharacterAPIViewController : BaseAPIViewController
 
