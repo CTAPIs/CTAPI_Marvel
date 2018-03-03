@@ -6,7 +6,7 @@
 //  Copyright © 2018年 casa. All rights reserved.
 //
 
-#import "CTMarvelCharacterComicsAPIManager.h"
+#import "CTMarvelCharactersComicsAPIManager.h"
 #import "CTMarvelService.h"
 
 NSString * const kCTMarvelCharacterComicsAPIManagerRequiredParamKeyCharacterId = @"characterId";
@@ -59,7 +59,7 @@ NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyOrderBy_Value
 
 
 
-@interface CTMarvelCharacterComicsAPIManager () <CTAPIManagerValidator>
+@interface CTMarvelCharactersComicsAPIManager () <CTAPIManagerValidator>
 
 @property (nonatomic, assign, readwrite) BOOL isFirstPage;
 @property (nonatomic, assign, readwrite) BOOL isLastPage;
@@ -68,7 +68,7 @@ NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyOrderBy_Value
 
 @end
 
-@implementation CTMarvelCharacterComicsAPIManager
+@implementation CTMarvelCharactersComicsAPIManager
 
 @synthesize errorMessage = _errorMessage;
 

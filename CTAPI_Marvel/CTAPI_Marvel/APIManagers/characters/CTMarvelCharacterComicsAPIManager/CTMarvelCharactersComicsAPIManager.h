@@ -56,7 +56,7 @@ extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyOrderB
 extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyOrderBy_Value_Title;
 extern NSString * const kCTMarvelCharacterComicsAPIManagerOptionalParamKeyOrderBy_Value_IssueNumber;
 
-@interface CTMarvelCharacterComicsAPIManager : CTAPIBaseManager <CTAPIManager, CTPagableAPIManager>
+@interface CTMarvelCharactersComicsAPIManager : CTAPIBaseManager <CTAPIManager, CTPagableAPIManager>
 
 @property (nonatomic, assign) NSInteger pageSize;
 @property (nonatomic, assign, readonly) NSUInteger currentPageNumber;

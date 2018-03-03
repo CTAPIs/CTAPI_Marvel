@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1896A2204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1896A0204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.m */; };
 		4A3CC4F2204646C8009F3CF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC4F1204646C8009F3CF1 /* AppDelegate.m */; };
 		4A3CC4F5204646C8009F3CF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC4F4204646C8009F3CF1 /* ViewController.m */; };
 		4A3CC4F8204646C8009F3CF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3CC4F6204646C8009F3CF1 /* Main.storyboard */; };
@@ -21,12 +22,14 @@
 		4A3CC5472046563D009F3CF1 /* CTMarvelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC5462046563D009F3CF1 /* CTMarvelService.m */; };
 		4A3CC54A20465CD1009F3CF1 /* CharacterAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC54920465CD1009F3CF1 /* CharacterAPIViewController.m */; };
 		4A3CC54E20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC54D20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m */; };
-		4A77491D20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A77491C20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m */; };
+		4A77491D20468347008B1DA4 /* CTMarvelCharactersComicsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A77491C20468347008B1DA4 /* CTMarvelCharactersComicsAPIManager.m */; };
 		A920CC7CE957ECDC642F301A /* libPods-CTAPI_Marvel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BD973026D37D6C2B6B7439 /* libPods-CTAPI_Marvel.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1E33244ADBF54AD4758AC0F4 /* Pods-CTAPI_Marvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTAPI_Marvel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CTAPI_Marvel/Pods-CTAPI_Marvel.debug.xcconfig"; sourceTree = "<group>"; };
+		4A1896A0204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMarvelCharactersEventsAPIManager.m; sourceTree = "<group>"; };
+		4A1896A1204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMarvelCharactersEventsAPIManager.h; sourceTree = "<group>"; };
 		4A3CC4ED204646C8009F3CF1 /* CTAPI_Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTAPI_Marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3CC4F0204646C8009F3CF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A3CC4F1204646C8009F3CF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,8 +56,8 @@
 		4A3CC54920465CD1009F3CF1 /* CharacterAPIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterAPIViewController.m; sourceTree = "<group>"; };
 		4A3CC54C20465D55009F3CF1 /* CharacterAPIViewController+APIParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CharacterAPIViewController+APIParams.h"; sourceTree = "<group>"; };
 		4A3CC54D20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CharacterAPIViewController+APIParams.m"; sourceTree = "<group>"; };
-		4A77491B20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMarvelCharacterComicsAPIManager.h; sourceTree = "<group>"; };
-		4A77491C20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMarvelCharacterComicsAPIManager.m; sourceTree = "<group>"; };
+		4A77491B20468347008B1DA4 /* CTMarvelCharactersComicsAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMarvelCharactersComicsAPIManager.h; sourceTree = "<group>"; };
+		4A77491C20468347008B1DA4 /* CTMarvelCharactersComicsAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMarvelCharactersComicsAPIManager.m; sourceTree = "<group>"; };
 		50C7D1A614AA4EAD6A530A61 /* Pods-CTAPI_Marvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTAPI_Marvel.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTAPI_Marvel/Pods-CTAPI_Marvel.release.xcconfig"; sourceTree = "<group>"; };
 		B0BD973026D37D6C2B6B7439 /* libPods-CTAPI_Marvel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CTAPI_Marvel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +80,15 @@
 				B0BD973026D37D6C2B6B7439 /* libPods-CTAPI_Marvel.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A18969F204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				4A1896A1204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.h */,
+				4A1896A0204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.m */,
+			);
+			path = CTMarvelCharactersEventsAPIManager;
 			sourceTree = "<group>";
 		};
 		4A3CC4E4204646C8009F3CF1 = {
@@ -202,6 +214,7 @@
 		4A3CC52E20465418009F3CF1 /* characters */ = {
 			isa = PBXGroup;
 			children = (
+				4A18969F204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager */,
 				4A77491A20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager */,
 				4A3CC53220465418009F3CF1 /* CTMarvelCharactersAPIManager */,
 				4A3CC52F20465418009F3CF1 /* CTMarvelCharacterByIdAPIManager */,
@@ -285,8 +298,8 @@
 		4A77491A20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager */ = {
 			isa = PBXGroup;
 			children = (
-				4A77491B20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.h */,
-				4A77491C20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m */,
+				4A77491B20468347008B1DA4 /* CTMarvelCharactersComicsAPIManager.h */,
+				4A77491C20468347008B1DA4 /* CTMarvelCharactersComicsAPIManager.m */,
 			);
 			path = CTMarvelCharacterComicsAPIManager;
 			sourceTree = "<group>";
@@ -429,11 +442,12 @@
 				4A3CC540204654E0009F3CF1 /* Target_CTAppContext.m in Sources */,
 				4A3CC54E20465D55009F3CF1 /* CharacterAPIViewController+APIParams.m in Sources */,
 				4A3CC4F5204646C8009F3CF1 /* ViewController.m in Sources */,
+				4A1896A2204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.m in Sources */,
 				4A3CC54320465551009F3CF1 /* Target_CTMarvelService.m in Sources */,
 				4A3CC500204646C8009F3CF1 /* main.m in Sources */,
 				4A3CC53620465418009F3CF1 /* CTMarvelCharacterByIdAPIManager.m in Sources */,
 				4A3CC53D204654D0009F3CF1 /* Target_CTMarvelKey.m in Sources */,
-				4A77491D20468347008B1DA4 /* CTMarvelCharacterComicsAPIManager.m in Sources */,
+				4A77491D20468347008B1DA4 /* CTMarvelCharactersComicsAPIManager.m in Sources */,
 				4A3CC54A20465CD1009F3CF1 /* CharacterAPIViewController.m in Sources */,
 				4A3CC5472046563D009F3CF1 /* CTMarvelService.m in Sources */,
 				4A3CC4F2204646C8009F3CF1 /* AppDelegate.m in Sources */,
@@ -572,9 +586,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EJ552L8U27;
 				INFOPLIST_FILE = CTAPI_Marvel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "casa.CTAPI-Marvel";
+				PRODUCT_BUNDLE_IDENTIFIER = casa.CTAPIMarvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -586,9 +601,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EJ552L8U27;
 				INFOPLIST_FILE = CTAPI_Marvel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "casa.CTAPI-Marvel";
+				PRODUCT_BUNDLE_IDENTIFIER = casa.CTAPIMarvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

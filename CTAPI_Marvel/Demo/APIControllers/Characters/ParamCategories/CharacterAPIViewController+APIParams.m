@@ -7,9 +7,6 @@
 //
 
 #import "CharacterAPIViewController+APIParams.h"
-#import "CTMarvelCharacterByIdAPIManager.h"
-#import "CTMarvelCharactersAPIManager.h"
-#import "CTMarvelCharacterComicsAPIManager.h"
 
 @implementation CharacterAPIViewController (APIParams)
 
@@ -29,6 +26,11 @@
 - (NSDictionary *)paramsForComicList
 {
     return @{kCTMarvelCharacterComicsAPIManagerRequiredParamKeyCharacterId:@"1011334"};
+}
+
+- (NSDictionary *)paramsForEventList
+{
+    return @{kCTMarvelCharactersEventsAPIManagerRequiredParamKeyCharacterID:@"1011334"};
 }
 
 @end

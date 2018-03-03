@@ -119,7 +119,6 @@ getInfomation() {
 }
 
 # start here
-git pull origin master --tags
 while [ "$confirmed" != "y" -a "$confirmed" != "Y" ]
 do
     if [ "$confirmed" == "n" -o "$confirmed" == "N" ]; then

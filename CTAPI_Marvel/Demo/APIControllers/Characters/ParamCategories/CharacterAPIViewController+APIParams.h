@@ -9,10 +9,16 @@
 
 #import "CharacterAPIViewController.h"
 
+#import "CTMarvelCharacterByIdAPIManager.h"
+#import "CTMarvelCharactersAPIManager.h"
+#import "CTMarvelCharactersComicsAPIManager.h"
+#import "CTMarvelCharactersEventsAPIManager.h"
+
 @interface CharacterAPIViewController (APIParams)
 
 - (NSDictionary *)paramsForCharacterById;
 - (NSDictionary *)paramsForCharacterList;
 - (NSDictionary *)paramsForComicList;
+- (NSDictionary *)paramsForEventList;
 
 @end
