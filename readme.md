@@ -27,7 +27,7 @@ How To Use It
 @end
 ```
 
-- create an Object named `CTAppContext` in your own project (for [CTNetworking](https://github.com/casatwy/CTNetworking))
+- create an Object named `Target_CTAppContext` in your own project (for [CTNetworking](https://github.com/casatwy/CTNetworking))
 
 ```objective-c
 @implementation Target_CTAppContext
