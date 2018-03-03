@@ -103,6 +103,19 @@ NSString * const kCTMarvelCharactersEventsAPIManagerOptionalParamKeyOrderBy_Valu
     } else {
         self.pageNumber = [result[@"offset"] unsignedIntegerValue] / self.pageSize;
     }
+    
+    if ([params[@"creators"] isKindOfClass:[NSArray class]]) {
+        result[@"creators"] = [params[@"creators"] componentsJoinedByString:@","];
+    }
+    if ([params[@"series"] isKindOfClass:[NSArray class]]) {
+        result[@"series"] = [params[@"series"] componentsJoinedByString:@","];
+    }
+    if ([params[@"comics"] isKindOfClass:[NSArray class]]) {
+        result[@"comics"] = [params[@"comics"] componentsJoinedByString:@","];
+    }
+    if ([params[@"stories"] isKindOfClass:[NSArray class]]) {
+        result[@"stories"] = [params[@"stories"] componentsJoinedByString:@","];
+    }
 
     return result;
 }
