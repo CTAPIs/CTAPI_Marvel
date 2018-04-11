@@ -324,8 +324,6 @@
 				4A3CC4E9204646C8009F3CF1 /* Sources */,
 				4A3CC4EA204646C8009F3CF1 /* Frameworks */,
 				4A3CC4EB204646C8009F3CF1 /* Resources */,
-				7E740057F75486521677134F /* [CP] Embed Pods Frameworks */,
-				13D9D75A1C9A6BA018AFA87C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -383,36 +381,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13D9D75A1C9A6BA018AFA87C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTAPI_Marvel/Pods-CTAPI_Marvel-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E740057F75486521677134F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTAPI_Marvel/Pods-CTAPI_Marvel-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C33B399B0F901EA6A3FD7E9D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
