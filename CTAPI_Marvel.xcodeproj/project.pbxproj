@@ -148,49 +148,9 @@
 		4A3CC50820464B78009F3CF1 /* APIControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A3CC50920464B78009F3CF1 /* Series */,
-				4A3CC50A20464B78009F3CF1 /* Comics */,
-				4A3CC50B20464B78009F3CF1 /* Stories */,
-				4A3CC50C20464B78009F3CF1 /* Creators */,
-				4A3CC50D20464B78009F3CF1 /* Events */,
 				4A3CC50E20464B78009F3CF1 /* Characters */,
 			);
 			path = APIControllers;
-			sourceTree = "<group>";
-		};
-		4A3CC50920464B78009F3CF1 /* Series */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Series;
-			sourceTree = "<group>";
-		};
-		4A3CC50A20464B78009F3CF1 /* Comics */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Comics;
-			sourceTree = "<group>";
-		};
-		4A3CC50B20464B78009F3CF1 /* Stories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Stories;
-			sourceTree = "<group>";
-		};
-		4A3CC50C20464B78009F3CF1 /* Creators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Creators;
-			sourceTree = "<group>";
-		};
-		4A3CC50D20464B78009F3CF1 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Events;
 			sourceTree = "<group>";
 		};
 		4A3CC50E20464B78009F3CF1 /* Characters */ = {
