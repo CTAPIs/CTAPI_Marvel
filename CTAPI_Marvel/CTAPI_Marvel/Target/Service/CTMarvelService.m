@@ -50,6 +50,10 @@ NSString * const CTServiceIdentifierMarvel = @"CTMarvelService";
 
 - (NSDictionary *)resultWithResponseData:(NSData *)responseData response:(NSURLResponse *)response request:(NSURLRequest *)request error:(NSError **)error
 {
+    if (responseData == nil) {
+        return @{kCTApiProxyValidateResultKeyResponseJSONString:@"response is nil"};
+    }
+    
     NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
     result[kCTApiProxyValidateResultKeyResponseData] = responseData;
     result[kCTApiProxyValidateResultKeyResponseJSONString] = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
