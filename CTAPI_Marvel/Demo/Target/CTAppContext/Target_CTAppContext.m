@@ -7,6 +7,7 @@
 //
 
 #import "Target_CTAppContext.h"
+#import <AFNetworking/AFNetworking.h>
 
 @implementation Target_CTAppContext
 

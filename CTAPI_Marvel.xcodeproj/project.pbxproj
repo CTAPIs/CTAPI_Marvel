@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A1896A2204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1896A0204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.m */; };
+		4A31B3AD21359CCE00981995 /* *.marvel.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4A31B3AC21359C2F00981995 /* *.marvel.com.cer */; };
 		4A3CC4F2204646C8009F3CF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC4F1204646C8009F3CF1 /* AppDelegate.m */; };
 		4A3CC4F5204646C8009F3CF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3CC4F4204646C8009F3CF1 /* ViewController.m */; };
 		4A3CC4F8204646C8009F3CF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3CC4F6204646C8009F3CF1 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		1E33244ADBF54AD4758AC0F4 /* Pods-CTAPI_Marvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTAPI_Marvel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CTAPI_Marvel/Pods-CTAPI_Marvel.debug.xcconfig"; sourceTree = "<group>"; };
 		4A1896A0204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMarvelCharactersEventsAPIManager.m; sourceTree = "<group>"; };
 		4A1896A1204A54B0008225B3 /* CTMarvelCharactersEventsAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMarvelCharactersEventsAPIManager.h; sourceTree = "<group>"; };
+		4A31B3AC21359C2F00981995 /* *.marvel.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "*.marvel.com.cer"; sourceTree = "<group>"; };
 		4A3CC4ED204646C8009F3CF1 /* CTAPI_Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTAPI_Marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3CC4F0204646C8009F3CF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A3CC4F1204646C8009F3CF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		4A3CC50620464A47009F3CF1 /* CTAPI_Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				4A31B3AC21359C2F00981995 /* *.marvel.com.cer */,
 				4A3CC52D20465418009F3CF1 /* APIManagers */,
 				4A3CC53520465418009F3CF1 /* Target */,
 			);
@@ -332,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A31B3AD21359CCE00981995 /* *.marvel.com.cer in Resources */,
 				4A3CC4FD204646C8009F3CF1 /* LaunchScreen.storyboard in Resources */,
 				4A3CC4FA204646C8009F3CF1 /* Assets.xcassets in Resources */,
 				4A3CC4F8204646C8009F3CF1 /* Main.storyboard in Resources */,

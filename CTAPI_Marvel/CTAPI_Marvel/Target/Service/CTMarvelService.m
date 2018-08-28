@@ -14,8 +14,9 @@ NSString * const CTServiceIdentifierMarvel = @"CTMarvelService";
 
 @interface CTMarvelService ()
 
-@property (nonatomic, strong, readonly) NSString *baseURL;
+@property (nonatomic, strong, readonly) NSURL *baseURL;
 @property (nonatomic, strong) AFHTTPRequestSerializer *httpRequestSerializer;
+@property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
 
 @end
 
@@ -26,7 +27,7 @@ NSString * const CTServiceIdentifierMarvel = @"CTMarvelService";
 - (NSURLRequest *)requestWithParams:(NSDictionary *)params methodName:(NSString *)methodName requestType:(CTAPIManagerRequestType)requestType
 {
     if (requestType == CTAPIManagerRequestTypeGet) {
-        NSString *urlString = [NSString stringWithFormat:@"%@/%@", self.baseURL, methodName];
+        NSString *urlString = [NSString stringWithFormat:@"%@:443/v1/public/%@", self.baseURL, methodName];
         
         NSString *tsString = [NSUUID UUID].UUIDString;
         NSString *privateKey = [[CTMediator sharedInstance] performTarget:@"CTMarvelKey" action:@"MarvelPrivateKey" params:nil shouldCacheTarget:YES];
@@ -61,19 +62,34 @@ NSString * const CTServiceIdentifierMarvel = @"CTMarvelService";
     return result;
 }
 
+- (BOOL)handleCommonErrorWithResponse:(CTURLResponse *)response manager:(CTAPIBaseManager *)manager errorType:(CTAPIManagerErrorType)errorType {
+    return YES;
+}
+
 #pragma mark - getters and setters
-- (NSString *)baseURL
+- (AFHTTPSessionManager *)sessionManager
+{
+    if (_sessionManager == nil) {
+        _sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:self.baseURL];
+        _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+        _sessionManager.securityPolicy = securityPolicy;
+    }
+    return _sessionManager;
+}
+
+- (NSURL *)baseURL
 {
     if (self.apiEnvironment == CTServiceAPIEnvironmentRelease) {
-        return @"https://gateway.marvel.com:443/v1/public";
+        return [NSURL URLWithString:@"https://gateway.marvel.com"];
     }
     if (self.apiEnvironment == CTServiceAPIEnvironmentDevelop) {
-        return @"https://gateway.marvel.com:443/v1/public";
+        return [NSURL URLWithString:@"https://gateway.marvel.com"];
     }
     if (self.apiEnvironment == CTServiceAPIEnvironmentReleaseCandidate) {
-        return @"https://gateway.marvel.com:443/v1/public";
+        return [NSURL URLWithString:@"https://gateway.marvel.com"];
     }
-    return @"https://gateway.marvel.com:443/v1/public";
+    return [NSURL URLWithString:@"https://gateway.marvel.com"];
 }
 
 - (AFHTTPRequestSerializer *)httpRequestSerializer
