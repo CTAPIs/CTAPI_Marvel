@@ -49,17 +49,17 @@ NSString * const CTServiceIdentifierMarvel = @"CTMarvelService";
     return nil;
 }
 
-- (NSDictionary *)resultWithResponseData:(NSData *)responseData response:(NSURLResponse *)response request:(NSURLRequest *)request error:(NSError **)error
-{
-    if (responseData == nil) {
-        return @{kCTApiProxyValidateResultKeyResponseJSONString:@"response is nil"};
-    }
-    
-    NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
-    result[kCTApiProxyValidateResultKeyResponseData] = responseData;
-    result[kCTApiProxyValidateResultKeyResponseJSONString] = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    result[kCTApiProxyValidateResultKeyResponseJSONObject] = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:NULL];
-    return result;
+- (NSDictionary *)resultWithResponseObject:(id)responseObject response:(NSURLResponse *)response request:(NSURLRequest *)request error:(NSError *__autoreleasing *)error {
+//    if (responseData == nil) {
+//        return @{kCTApiProxyValidateResultKeyResponseJSONString:@"response is nil"};
+//    }
+//
+//    NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
+//    result[kCTApiProxyValidateResultKeyResponseData] = responseData;
+//    result[kCTApiProxyValidateResultKeyResponseJSONString] = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+//    result[kCTApiProxyValidateResultKeyResponseJSONObject] = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:NULL];
+//    return result;
+    return nil;
 }
 
 - (BOOL)handleCommonErrorWithResponse:(CTURLResponse *)response manager:(CTAPIBaseManager *)manager errorType:(CTAPIManagerErrorType)errorType {
@@ -77,6 +77,9 @@ NSString * const CTServiceIdentifierMarvel = @"CTMarvelService";
     }
     return _sessionManager;
 }
+
+
+
 
 - (NSURL *)baseURL
 {
